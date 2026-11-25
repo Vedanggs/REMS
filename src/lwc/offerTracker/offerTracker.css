@@ -1,0 +1,14 @@
+
+.slds-table {
+    width: 100%;
+}
+
+.slds-table th,
+.slds-table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+lightning-button + lightning-button {
+    margin-left: 8px;
+}

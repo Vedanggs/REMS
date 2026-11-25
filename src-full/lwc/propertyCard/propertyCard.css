@@ -1,0 +1,57 @@
+
+.property-container {
+    padding: 12px;
+}
+
+.property-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+    color: #666;
+    border-radius: 8px;
+}
+
+.property-details {
+    padding: 12px 4px;
+}
+
+.property-details p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.available {
+    background: #e3fcef;
+    color: #087443;
+}
+
+.sold {
+    background: #fde2e2;
+    color: #ba0517;
+}
+
+.under-offer {
+    background: #fff1cc;
+    color: #8c4b02;
+}
+
+.button-container {
+    margin-top: 16px;
+}

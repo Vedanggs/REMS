@@ -1,0 +1,11 @@
+
+.slds-text-heading_large {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0176d3;
+    padding: 20px;
+}
+
+lightning-card {
+    display: block;
+}

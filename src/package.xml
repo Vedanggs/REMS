@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AgentDashboardController</members>
+        <members>AgentDashboardSummary</members>
+        <members>DealServiceTest</members>
+        <members>LwcApexControllerTest</members>
+        <members>OfferTrackerController</members>
+        <members>OfferTrackerControllerCoverageTest</members>
+        <members>PropertyAssignmentService</members>
+        <members>PropertyAssignmentServiceCoverageTest</members>
+        <members>PropertyListingController</members>
+        <members>PropertyVisitController</members>
+        <members>PropertyVisitControllerTest</members>
+        <members>TestDataFactory</members>
+        <members>TestDataFactoryTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>agentDashboard</members>
+        <members>offerTracker</members>
+        <members>propertyCard</members>
+        <members>propertyListing</members>
+        <members>propertySearchFilter</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>68.0</version>
+    <fullName>REMS</fullName>
+</Package>

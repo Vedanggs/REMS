@@ -1,0 +1,105 @@
+
+<template>
+    <lightning-card title="Available Properties" icon-name="standard:home">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Property Search Filter -->
+            <c-property-search-filter
+                onfilterchanged={handleFilterChanged}>
+            </c-property-search-filter>
+
+            <!-- Property Cards -->
+            <div class="slds-grid slds-wrap slds-m-top_large">
+
+                <template for:each={filteredProperties} for:item="property">
+                    <div key={property.Id}
+                         class="slds-col slds-size_1-of-1
+                                slds-large-size_1-of-2 slds-p-around_small">
+
+                        <c-property-card
+                            property={property}
+                            onbookvisit={handleBookVisit}>
+                        </c-property-card>
+
+                    </div>
+                </template>
+
+            </div>
+
+            <!-- Booking Form -->
+            <template if:true={showBookingForm}>
+
+                <lightning-card title="Book Property Visit"
+                                class="slds-m-top_large">
+
+                    <div class="slds-p-around_medium">
+
+                        <p class="slds-m-bottom_medium">
+                            Property: {selectedPropertyName}
+                        </p>
+
+                        <lightning-input
+                            label="Buyer Name"
+                            name="buyerName"
+                            value={buyerName}
+                            onchange={handleBookingInput}
+                            required>
+                        </lightning-input>
+
+                        <lightning-input
+                            label="Email"
+                            name="buyerEmail"
+                            type="email"
+                            value={buyerEmail}
+                            onchange={handleBookingInput}
+                            required>
+                        </lightning-input>
+
+                        <lightning-input
+                            label="Visit Date"
+                            name="visitDate"
+                            type="date"
+                            value={visitDate}
+                            min={minimumDate}
+                            onchange={handleBookingInput}
+                            required>
+                        </lightning-input>
+
+                        <div class="slds-m-top_medium">
+
+                            <lightning-button
+                                label="Confirm Booking"
+                                variant="brand"
+                                onclick={handleBookingSubmit}>
+                            </lightning-button>
+
+                            <lightning-button
+                                label="Cancel"
+                                variant="neutral"
+                                onclick={handleCancel}
+                                class="slds-m-left_small">
+                            </lightning-button>
+
+                        </div>
+
+                    </div>
+                </lightning-card>
+
+            </template>
+
+            <template if:false={hasProperties}>
+                <p class="slds-text-align_center slds-p-around_medium">
+                    No properties found.
+                </p>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">
+                    Unable to load properties.
+                </p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

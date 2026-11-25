@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Apex Classes -->
+    <types>
+        <members>AgentDashboardController</members>
+        <members>AgentDashboardSummary</members>
+        <members>AgentPerformanceReport</members>
+        <members>AgentPerformanceReportTest</members>
+        <members>CommissionCalculator</members>
+        <members>CommissionCalculatorTest</members>
+        <members>DealService</members>
+        <members>DealServiceTest</members>
+        <members>ExpiredOfferChecker</members>
+        <members>ExpiredOfferCheckerTest</members>
+        <members>LwcApexControllerTest</members>
+        <members>OfferTrackerController</members>
+        <members>OfferTrackerControllerCoverageTest</members>
+        <members>OfferTriggerHandler</members>
+        <members>OfferTriggerTest</members>
+        <members>PropertyAssignmentService</members>
+        <members>PropertyAssignmentServiceCoverageTest</members>
+        <members>PropertyImageProcessor</members>
+        <members>PropertyImageProcessorTest</members>
+        <members>PropertyListingController</members>
+        <members>PropertyValuationCallout</members>
+        <members>PropertyValuationCalloutTest</members>
+        <members>PropertyVisitController</members>
+        <members>PropertyVisitControllerTest</members>
+        <members>TestDataFactory</members>
+        <members>TestDataFactoryTest</members>
+        <name>ApexClass</name>
+    </types>
+
+    <!-- Apex Triggers -->
+    <types>
+        <members>BuyerAssignmentTrigger</members>
+        <members>OfferTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+
+    <!-- Approval Process -->
+    <types>
+        <members>Deal__c.Deal_Discount_Approval</members>
+        <name>ApprovalProcess</name>
+    </types>
+
+    <!-- Custom Fields -->
+    <types>
+        <members>Agent__c.Commission_Rate__c</members>
+        <members>Agent__c.Monthly_Conversion_Rate__c</members>
+        <members>Agent__c.Monthly_Deals__c</members>
+        <members>Agent__c.Monthly_Revenue__c</members>
+        <members>Agent__c.Territory__c</members>
+        <members>Agent__c.Tier__c</members>
+        <members>Agent__c.User__c</members>
+
+        <members>Buyer__c.Assigned_Agent__c</members>
+        <members>Buyer__c.Budget__c</members>
+        <members>Buyer__c.Email__c</members>
+        <members>Buyer__c.Lead_Source__c</members>
+        <members>Buyer__c.Preferred_Area__c</members>
+
+        <members>Deal__c.Close_Date__c</members>
+        <members>Deal__c.Commission__c</members>
+        <members>Deal__c.Offer__c</members>
+        <members>Deal__c.Property__c</members>
+        <members>Deal__c.Requires_Approval__c</members>
+        <members>Deal__c.Sale_Price__c</members>
+
+        <members>Offer__c.Buyer__c</members>
+        <members>Offer__c.Days_Open__c</members>
+        <members>Offer__c.Expiry_Date__c</members>
+        <members>Offer__c.Offer_Amount__c</members>
+        <members>Offer__c.Property__c</members>
+        <members>Offer__c.Status__c</members>
+
+        <members>Payment_Milestone__c.Amount__c</members>
+        <members>Payment_Milestone__c.Deal__c</members>
+        <members>Payment_Milestone__c.Due_Date__c</members>
+        <members>Payment_Milestone__c.Paid__c</members>
+
+        <members>Property_Visit__c.Buyer__c</members>
+        <members>Property_Visit__c.Conversion_Rate_Value__c</members>
+        <members>Property_Visit__c.Converted_to_Deal__c</members>
+        <members>Property_Visit__c.Outcome__c</members>
+        <members>Property_Visit__c.Property__c</members>
+        <members>Property_Visit__c.Visit_Date__c</members>
+
+        <members>Property__c.Agent__c</members>
+        <members>Property__c.Area__c</members>
+        <members>Property__c.Estimated_Value__c</members>
+        <members>Property__c.Garden__c</members>
+        <members>Property__c.Gym__c</members>
+        <members>Property__c.Image_URL_Valid__c</members>
+        <members>Property__c.Image_URL__c</members>
+        <members>Property__c.Parking__c</members>
+        <members>Property__c.Price__c</members>
+        <members>Property__c.Security__c</members>
+        <members>Property__c.Status__c</members>
+        <members>Property__c.Swimming_Pool__c</members>
+        <members>Property__c.Territory__c</members>
+        <members>Property__c.Type__c</members>
+        <name>CustomField</name>
+    </types>
+
+    <!-- Custom Objects -->
+    <types>
+        <members>Agent__c</members>
+        <members>Buyer__c</members>
+        <members>Deal__c</members>
+        <members>Offer__c</members>
+        <members>Payment_Milestone__c</members>
+        <members>Property_Visit__c</members>
+        <members>Property__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Dashboard -->
+    <types>
+        <members>REMS_Dashboards/WInPAQbJxFnJjAOVTVSlxrYduLIpFJ</members>
+        <name>Dashboard</name>
+    </types>
+
+    <!-- Flows -->
+    <types>
+        <members>Accepted_Offer_Automation</members>
+        <members>Create_Payment_Milestones</members>
+        <members>Daily_Expired_Offer_Checker</members>
+        <members>Expired_Offer_Checker</members>
+        <members>New_Property_Listing_Wizard</members>
+        <members>REMS_Property_Listing_Wizard</members>
+        <name>Flow</name>
+    </types>
+
+    <!-- Lightning Web Components -->
+    <types>
+        <members>agentDashboard</members>
+        <members>offerTracker</members>
+        <members>propertyCard</members>
+        <members>propertyListing</members>
+        <members>propertySearchFilter</members>
+        <name>LightningComponentBundle</name>
+    </types>
+
+    <!-- Permission Set -->
+    <types>
+        <members>Deal_Closer</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <!-- Profiles -->
+    <types>
+        <members>Admin</members>
+        <members>Junior Agent</members>
+        <members>REMS Buyer Portal Profile</members>
+        <members>Senior Agent</members>
+        <name>Profile</name>
+    </types>
+
+    <!-- Reports -->
+    <types>
+        <members>unfiled$public/Active_Offers_Pipeline</members>
+        <members>unfiled$public/Agent_Commission_Comparison</members>
+        <members>unfiled$public/Conversion_Rate_by_Area_and_Month_qPB</members>
+        <members>unfiled$public/Monthly_Sales_Revenue_by_Agent</members>
+        <members>unfiled$public/Property_Status_Distribution</members>
+        <name>Report</name>
+    </types>
+
+    <!-- Role Hierarchy -->
+    <types>
+        <members>Director</members>
+        <members>Regional_Manager</members>
+        <members>Senior_Agent</members>
+        <members>Junior_Agent</members>
+        <name>Role</name>
+    </types>
+
+    <!-- Territory Sharing Rule -->
+    <types>
+        <members>Property__c.Pune_Territory_Sharing</members>
+        <name>SharingCriteriaRule</name>
+    </types>
+
+    <!-- Email Templates -->
+    <types>
+        <members>unfiled$public/Visit_Confirmation</members>
+        <members>unfiled$public/Offer_Received</members>
+        <members>unfiled$public/Deal_Closed</members>
+        <name>EmailTemplate</name>
+    </types>
+
+    <!-- Email Alerts -->
+    <types>
+        <members>Property_Visit__c</members>
+        <members>Offer__c</members>
+        <members>Deal__c</members>
+        <name>Workflow</name>
+    </types>
+
+    <version>68.0</version>
+</Package>

@@ -1,0 +1,63 @@
+
+<template>
+    <template if:true={property}>
+        <lightning-card title={property.Name}>
+
+            <div class="property-container">
+
+                <!-- Property Image -->
+                <template if:true={hasImage}>
+                    <img
+                        src={property.Image_URL__c}
+                        alt="Property Image"
+                        class="property-image"
+                    />
+                </template>
+
+                <template if:false={hasImage}>
+                    <div class="image-placeholder">
+                        Property image not available
+                    </div>
+                </template>
+
+                <!-- Property Details -->
+                <div class="property-details">
+
+                    <p>
+                        <strong>Area:</strong> {property.Area__c}
+                    </p>
+
+                    <p>
+                        <strong>Price:</strong>
+                        <lightning-formatted-number
+                            value={property.Price__c}
+                            format-style="currency"
+                            currency-code="INR"
+                            maximum-fraction-digits="0">
+                        </lightning-formatted-number>
+                    </p>
+
+                    <!-- Status Badge -->
+                    <span class={statusClass}>
+                        {property.Status__c}
+                    </span>
+
+                    <!-- Book Visit Button -->
+                    <div class="button-container">
+                        <lightning-button
+                            label="Book Visit"
+                            variant="brand"
+                            onclick={handleBookVisit}>
+                        </lightning-button>
+                    </div>
+
+                </div>
+            </div>
+
+        </lightning-card>
+    </template>
+
+    <template if:false={property}>
+        <p>Property details not provided.</p>
+    </template>
+</template>

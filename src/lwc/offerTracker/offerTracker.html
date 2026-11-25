@@ -1,0 +1,80 @@
+
+<template>
+    <lightning-card title="Offer Tracker" icon-name="standard:opportunity">
+
+        <div class="slds-p-around_medium">
+
+            <template if:true={offers}>
+
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+
+                    <thead>
+                        <tr>
+                            <th>Buyer</th>
+                            <th>Offer Amount</th>
+                            <th>Status</th>
+                            <th>Expiry Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <template for:each={offers} for:item="offer">
+
+                            <tr key={offer.Id}>
+
+                                <td>{offer.buyerName}</td>
+
+                                <td>
+                                    <lightning-formatted-number
+                                        value={offer.Offer_Amount__c}
+                                        format-style="currency"
+                                        currency-code="INR">
+                                    </lightning-formatted-number>
+                                </td>
+
+                                <td>{offer.Status__c}</td>
+
+                                <td>
+                                    <lightning-formatted-date-time
+                                        value={offer.Expiry_Date__c}>
+                                    </lightning-formatted-date-time>
+                                </td>
+
+                                <td>
+                                    <lightning-button
+                                        label="Accept"
+                                        variant="success"
+                                        data-id={offer.Id}
+                                        data-status="Accepted"
+                                        onclick={handleStatusChange}>
+                                    </lightning-button>
+
+                                    <lightning-button
+                                        label="Reject"
+                                        variant="destructive"
+                                        data-id={offer.Id}
+                                        data-status="Rejected"
+                                        onclick={handleStatusChange}>
+                                    </lightning-button>
+                                </td>
+
+                            </tr>
+
+                        </template>
+                    </tbody>
+
+                </table>
+
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">
+                    Unable to load offers. Please check the Property record.
+                </p>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

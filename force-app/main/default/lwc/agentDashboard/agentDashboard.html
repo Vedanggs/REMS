@@ -1,0 +1,50 @@
+
+<template>
+    <lightning-card title="Agent Dashboard" icon-name="standard:dashboard">
+
+        <div class="slds-grid slds-wrap slds-p-around_medium">
+
+            <!-- Total Deals -->
+            <div class="slds-col slds-size_1-of-1
+                        slds-medium-size_1-of-3 slds-p-around_small">
+
+                <lightning-card title="Total Deals">
+                    <div class="slds-text-heading_large slds-align_absolute-center">
+                        {dealCount}
+                    </div>
+                </lightning-card>
+
+            </div>
+
+            <!-- Total Visits -->
+            <div class="slds-col slds-size_1-of-1
+                        slds-medium-size_1-of-3 slds-p-around_small">
+
+                <lightning-card title="Total Visits">
+                    <div class="slds-text-heading_large slds-align_absolute-center">
+                        {visitCount}
+                    </div>
+                </lightning-card>
+
+            </div>
+
+            <!-- Total Commission -->
+            <div class="slds-col slds-size_1-of-1
+                        slds-medium-size_1-of-3 slds-p-around_small">
+
+                <lightning-card title="Total Commission">
+                    <div class="slds-text-heading_large slds-align_absolute-center">
+                        <lightning-formatted-number
+                            value={commissionTotal}
+                            format-style="currency"
+                            currency-code="INR">
+                        </lightning-formatted-number>
+                    </div>
+                </lightning-card>
+
+            </div>
+
+        </div>
+
+    </lightning-card>
+</template>

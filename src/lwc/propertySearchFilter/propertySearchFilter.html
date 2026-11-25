@@ -1,0 +1,56 @@
+
+<template>
+    <lightning-card title="Search Properties" icon-name="standard:search">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Area Filter -->
+            <lightning-input
+                label="Area"
+                name="area"
+                type="text"
+                placeholder="Enter area"
+                value={area}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Property Type Filter -->
+            <lightning-combobox
+                label="Property Type"
+                name="type"
+                value={type}
+                options={typeOptions}
+                placeholder="Select property type"
+                onchange={handleChange}>
+            </lightning-combobox>
+
+            <!-- Minimum Price -->
+            <lightning-input
+                label="Minimum Price"
+                name="minPrice"
+                type="number"
+                value={minPrice}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Maximum Price -->
+            <lightning-input
+                label="Maximum Price"
+                name="maxPrice"
+                type="number"
+                value={maxPrice}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Search Button -->
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    label="Apply Filters"
+                    variant="brand"
+                    onclick={handleSearch}>
+                </lightning-button>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
